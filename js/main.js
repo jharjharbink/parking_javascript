@@ -4,11 +4,6 @@ import Ticket from "./ticket.js";
 let tickets = []; 
 let cars = [];
 
-let successBox = document.querySelector("#successBox");
-let alertBox = document.querySelector("#alertBox");
-let messageBox = document.querySelector("#messageBox");
-
-
 // the car ask for a ticket
 document.querySelector("#enterBtn").addEventListener("click", () => {
     let licencePlate = document.querySelector("#licencePlate");
@@ -25,6 +20,10 @@ document.querySelector("#enterBtn").addEventListener("click", () => {
 document.querySelector("#paymentBtn").addEventListener("click", () => {
     
     const parkingEndTimestamp = Date.now();
+
+    let successBox = document.querySelector("#successBox");
+    let alertBox = document.querySelector("#alertBox");
+    let messageBox = document.querySelector("#messageBox");
 
     if(licencePlate.value) {
 
